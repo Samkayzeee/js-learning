@@ -1,18 +1,19 @@
-const FizzBuzz = (n) => {
-    for(let i = 1; i <= n; i++){
-        if(i%3 === 0 && i%5 === 0){
-            console.log('FizzBuzz');
-        }
-        else if(i%3 === 0){
-            console.log('Fizz');
-        }
-        else if(i%5 === 0){
-            console.log('Buzz');
-        }
-        else if(i%3 !== 0 || i%5 !== 0){
-            console.log(i);
-        }
-    }
-}
+const paras = document.querySelectorAll('p');
+const anchor = document.querySelector('a');
 
-// FizzBuzz(15);
+
+paras.forEach((para) => {
+    if (para.innerText.includes('success')) {
+        para.style.color = 'green';
+    }
+    else if(para.innerText.includes('error')){
+        para.style.color = 'red';
+    }
+});
+
+anchor.onclick = (e) => {
+    let tag = e.target;
+    tag.setAttribute('target', '');
+    tag.setAttribute('href', '');
+    tag.remove;
+}
