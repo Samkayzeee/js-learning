@@ -10,10 +10,3 @@ paras.forEach((para) => {
         para.style.color = 'red';
     }
 });
-
-anchor.onclick = (e) => {
-    let tag = e.target;
-    tag.setAttribute('target', '');
-    tag.setAttribute('href', '');
-    tag.remove;
-}
